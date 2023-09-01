@@ -1,13 +1,18 @@
 
 import subprocess
-import time
+import socket
 
 def ping(host):
     result = subprocess.run(['ping', host,'-n', '1'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     outputs = result.stdout.decode()
     
     if outputs.find("unreachable")<0:
-        print(host)
+        print(host,)
+        try:
+            host_name= socket.gethostbyaddr(host)[0]
+            print(f"{host_name}")
+        except socket.error as e:
+            print(f"")
             
 n = 0
 i=127
