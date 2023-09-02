@@ -1,2 +1,2 @@
-# Python.network.scan
-Python code to network scan 
+#linux etic security
+
