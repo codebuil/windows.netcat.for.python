@@ -1,2 +1,2 @@
-#linux etic security
+#bat windos linux
 
